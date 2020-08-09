@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript Calculator</title>
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <div id="particles-js">
+                <form id="cal" name="calculator">
+                        <div id="display-div">
+
+                                <textarea name="display" id="display" cols="5" rows="1">
+                                </textarea>
+                        </div>
+
+                        <!-- using type = "submit" led to auto refreshing of the page rendering it useless, it was changed to button   -->
+                        <div class="row">
+                                <input type="button" name="clear" id="equals" value="C" onclick="clearAll()">
+                                <input type="button" value="Del" onclick="backSpace()">
+                                <!-- <input type="button" name="delete" value="DEL" onclick="deleteIn()"> -->
+                                <input type="button" class="operator" name="divide" value="/" onclick="number(value)">
+                                <input type="button" name="inverse" value="inv" onclick="inverse()">
+                                <input type="button" name="radian" value="Rad" onclick="radians()">
+                                <input type="button" name="sine" value="Sin" onclick="sin()">
+                        </div>
+                        <div class="row">
+                                <input type="button" class="number" name="seven" value="7" onclick="number(value)">
+                                <input type="button" class="number" name="eight" value="8" onclick="number(value)">
+                                <input type="button" class="number" name="nine" value="9" onclick="number(value)">
+                                <input type="button" class="operator" name="multiply" value="*" onclick="number(value)">
+                                <input type="button" name="cosine" value="Cos" onclick="cos()">
+                                <input type="button" name="tangent" value="Tan" onclick="tan()">
+                                <input type="button" id="percent" name="percent" value="%" onclick="percentage()">
+                        </div>
+
+                        <div class="row">
+                                <input type="button" class="number" name="four" value="4" onclick="number(value)">
+                                <input type="button" class="number" name="five" value="5" onclick="number(value)">
+                                <input type="button" class="number" name="six" value="6" onclick="number(value)">
+                                <input type="button" class="operator" name="substract" value="-" onclick="number(value)">
+                                <input type="button" name="natural-log" value="In" onclick="iN()">
+                                <input type="button" name="Log" value="Log" onclick="Log()">
+                                <input type="button" name="factorial" value="!" onclick="fac()">
+                        </div>
+
+                        <div class="row">
+                                <input type="button" class="number" name="one" value="1" onclick="number(value)">
+                                <input type="button" class="number" name="two" value="2" onclick="number(value)">
+                                <input type="button" class="number" name="three" value="3" onclick="number(value)">
+                                <input type="button" class="operator" name="add" value="+" onclick="number(value)">
+                                <input type="button" name="power" value="^" onclick="powerOf()">
+                                <input type="button" name="pie" value="pie" onclick="pi()">
+                                <input type="button" name="exponential" value="e" onclick="expo()">
+                        </div>
+
+                        <div class="row">
+                                <input type="button" id="decimal" name="decimal" value="." onclick="number(value)">
+                                <input type="button" class="number" name="zero" value="0" onclick="number(value)">
+                                <input type="button" id="equals" name="equals" value="=" onclick="equal()">
+
+                                <input type="button" name="left-bracket" value="(" onclick="number(value)">
+                                <input type="button" name="right-bracket" value=")" onclick="number(value)">
+                                <input type="button" name="square-root" value="sqrt" onclick="sqrt()">
+                        </div>
+                </form>
+        </div>
+        <script src="js/particles.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js.js"></script>
+</body>
+</html>
